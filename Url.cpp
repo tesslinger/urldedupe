@@ -2,7 +2,7 @@
 // Created by Ameen Maali on 6/1/20.
 //
 
-#include <filesystem>
+#include <experimental/filesystem>
 #include <regex>
 
 #include "Url.hpp"
@@ -266,6 +266,6 @@ bool Url::is_asset(const std::string &str)
 
 bool Url::has_extension()
 {
-    std::filesystem::path fpath {this->path};
+    std::experimental::filesystem::path fpath {this->path};
     return fpath.has_extension();
 }
